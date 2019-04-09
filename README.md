@@ -53,4 +53,55 @@ cv2.imwrite('color_patch_solid.png", average_image)
 > So after we have got the average dominant colour from the images
 >we can check for highest value of `R,G,B` from one of the images to be compared
 >and look for that particular layer intensity values in other to images
->in order to compare the images
+>in order to compare the images.
+
+```python
+im = Image.open('color_patch_solid.png.png')
+pixel = (2,2)
+rgb = im.getpixel(pixel) #rgb variable stores the R,G,B values
+
+#Now we will convert the array to a list to extract
+#individual R,G,b values and use them to compare
+rgb = list(im.getpixel(pixel) #rgb variable stores the R,G,B values)
+
+a = int(rgb[0])
+b = int(rgb[1])
+c = int(rgb[2])
+
+if (a >= b) and (a >= c): 
+	largest = 'red' 
+elif (b >= a) and (b >= c): 
+	largest = 'green'
+else: 
+	largest = 'blue'
+#so now our 'largest' variable had stored the max value out of three R,G,B channels
+#hence we will use that channel to compare the other two image.
+print(largest)
+```
+
+>so now we have got the channel which we will be using to compare the other two images
+>and check which of the other two colours are similar to this colour
+>here are all those three color patches
+![color patch solid](Assets/sampe_1_color_patch.png)
+
+>so this was how the code works
+>anyways let me show you a demo how i used this code to make my computer play the game.
+
+>here we go!
+![color patch solid](Assets/sample_1.png)
+![color patch solid](Assets/sample_2.png)
+>you can clearly see how it loads the image
+>finds the dominant color, as i explained above
+>and finally decides which one of the out of three channels R,G,B
+>will be used to compare the image
+```python
+ques_layer = max_color(ques_color)
+ans1_layer = max_color(ans1_color)
+ans2_layer = max_color(ans2_color)
+
+if ans1_layer == ques_layer :
+	ans = 'Left Image is Similar'
+else:
+	ans = 'Right Image is Similar'
+```
+
