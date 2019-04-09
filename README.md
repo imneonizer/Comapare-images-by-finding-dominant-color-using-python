@@ -104,4 +104,8 @@ if ans1_layer == ques_layer :
 else:
 	ans = 'Right Image is Similar'
 ```
-
+>Thanks for giving your precious time to read about my project
+>feel free to copy the repository
+>if you find any problem contact me at
+>mneonizer@gmail.com
+>if you find it useful, don't forget to star the repository
