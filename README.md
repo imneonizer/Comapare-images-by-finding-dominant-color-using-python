@@ -49,3 +49,8 @@ cv2.imwrite('color_patch_solid.png", average_image)
 >Saved `color_patch_solid.png` image
 
 ![color patch solid](Assets/ques_patch_solid.png)
+
+> So after we have got the average dominant colour from the images
+>we can check for highest value of `R,G,B` from one of the images to be compared
+>and look for that particular layer intensity values in other to images
+>in order to compare the images
