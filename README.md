@@ -46,4 +46,5 @@ average_image[:] = int_averages
 cv2.imwrite('color_patch_solid.png", average_image)
 ```
 Saved `color_patch_solid.png` image
+
 ![color patch solid](Assets/ques_patch_solid.png)
